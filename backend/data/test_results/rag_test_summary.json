@@ -1,0 +1,17 @@
+{
+    "total_queries": 12,
+    "successful_requests": 12,
+    "stability_rate": 1.0,
+    "correct_answers": 11,
+    "accuracy_rate": 0.917,
+    "keyword_match_count": 11,
+    "keyword_match_rate": 0.917,
+    "correct_sources": 12,
+    "source_accuracy_rate": 1.0,
+    "speed_ok_count": 12,
+    "speed_ok_rate": 1.0,
+    "average_time_sec": 32.797,
+    "min_time_sec": 3.65,
+    "max_time_sec": 44.288,
+    "speed_limit_sec": 60.0
+}

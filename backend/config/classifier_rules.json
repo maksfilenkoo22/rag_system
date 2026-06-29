@@ -1,0 +1,884 @@
+{
+  "default": {
+    "class_name": "outside_knowledge_base",
+    "display_name": "Вне базы знаний",
+    "source_filter": [],
+    "document_type_filter": [],
+    "knowledge_category_filter": [],
+    "is_normative": null,
+    "top_k": 5,
+    "min_score": 0.45,
+    "priority": 0,
+    "search_multiplier": 4,
+    "max_chunks_per_document": null
+  },
+  "classes": [
+    {
+      "class_name": "example_presentation",
+      "display_name": "Пример презентации по НИР",
+      "priority": 230,
+      "phrases": [
+        "пример презентации",
+        "пример слайдов",
+        "пример структуры презентации",
+        "пример презентации по нир",
+        "покажи пример структуры презентации",
+        "покажи пример структуры презентации по нир",
+        "как выглядит презентация",
+        "готовая презентация",
+        "структура презентации",
+        "слайды по нир",
+        "show an example nir presentation structure",
+        "show the structure of an example nir presentation",
+        "example nir presentation structure",
+        "list the slides of the nir presentation"
+      ],
+      "tokens": [
+        "пример",
+        "презентация",
+        "слайды",
+        "структура",
+        "нир",
+        "готовая",
+        "show",
+        "list",
+        "example",
+        "presentation",
+        "slides",
+        "structure"
+      ],
+      "stems": [
+        "пример*",
+        "презентац*",
+        "слайд*",
+        "структур*",
+        "example*",
+        "presentation*",
+        "slide*",
+        "structure*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "презентац*",
+          "слайд*",
+          "presentation*",
+          "slide*"
+        ],
+        [
+          "пример*",
+          "структур*",
+          "example*",
+          "structure*"
+        ]
+      ],
+      "source_filter": [
+        "нир преза филенко.pptx"
+      ],
+      "document_type_filter": [
+        "example_presentation"
+      ],
+      "knowledge_category_filter": [
+        "nir_example"
+      ],
+      "is_normative": false,
+      "top_k": 5,
+      "min_score": 0.45,
+      "min_rule_score": 6,
+      "search_multiplier": 6,
+      "max_chunks_per_document": 8
+    },
+    {
+      "class_name": "pz_structure",
+      "display_name": "Структура пояснительной записки по НИР",
+      "priority": 220,
+      "phrases": [
+        "какие разделы должны быть в пз",
+        "какие разделы должны быть в пояснительной записке",
+        "что должно быть в пз",
+        "структура пз",
+        "разделы пз",
+        "содержание пз",
+        "структура пояснительной записки",
+        "разделы пояснительной записки",
+        "что входит в пояснительную записку",
+        "какой объем пз",
+        "какой объём пз",
+        "объем пояснительной записки",
+        "объём пояснительной записки",
+        "покажи структуру нир",
+        "перечисли разделы нир",
+        "назови разделы нир",
+        "структура нир",
+        "разделы нир",
+        "содержание нир",
+        "структура пояснительной записки по нир",
+        "покажи разделы пояснительной записки по нир",
+        "show the structure of the nir report",
+        "show the nir report structure",
+        "list the sections of the nir report",
+        "nir report structure",
+        "structure of the explanatory report",
+        "research report structure"
+      ],
+      "tokens": [
+        "пз",
+        "пояснительная",
+        "записка",
+        "разделы",
+        "структура",
+        "содержание",
+        "реферат",
+        "введение",
+        "заключение",
+        "литература",
+        "приложения",
+        "объем",
+        "объём",
+        "нир",
+        "аналитическая",
+        "программная",
+        "тестирование",
+        "sections",
+        "structure",
+        "report",
+        "introduction",
+        "testing",
+        "conclusion",
+        "references"
+      ],
+      "stems": [
+        "структур*",
+        "раздел*",
+        "содержан*",
+        "поясн*",
+        "записк*",
+        "нир*",
+        "structure*",
+        "section*",
+        "content*",
+        "report*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "структур*",
+          "раздел*",
+          "содержан*",
+          "что входит",
+          "structure*",
+          "section*",
+          "contents*",
+          "outline*"
+        ],
+        [
+          "нир",
+          "пз",
+          "поясн*",
+          "научно-исследовательск*",
+          "report*",
+          "research*"
+        ]
+      ],
+      "excluded_groups": [
+        [
+          "презентац*"
+        ],
+        [
+          "слайд*"
+        ],
+        [
+          "presentation*"
+        ],
+        [
+          "slide*"
+        ]
+      ],
+      "source_filter": [
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf",
+        "struct_uir2001.docx",
+        "struct_rspz_uir.docx",
+        "Производственная практика (научно-исследовательская работа).pdf"
+      ],
+      "document_type_filter": [],
+      "knowledge_category_filter": [],
+      "is_normative": true,
+      "top_k": 8,
+      "min_score": 0.25,
+      "min_rule_score": 6,
+      "search_multiplier": 6,
+      "max_chunks_per_document": 3
+    },
+    {
+      "class_name": "example_report",
+      "display_name": "Пример отчёта по НИР",
+      "priority": 180,
+      "phrases": [
+        "пример отчета",
+        "пример отчёта",
+        "пример пз",
+        "пример нир",
+        "пример отчета по нир",
+        "пример отчёта по нир",
+        "как выглядит отчет",
+        "как выглядит отчёт",
+        "как выглядит пз",
+        "готовый отчет",
+        "готовый отчёт",
+        "пример пояснительной записки"
+      ],
+      "tokens": [
+        "пример",
+        "отчет",
+        "отчёт",
+        "пз",
+        "нир",
+        "готовый",
+        "структура"
+      ],
+      "stems": [
+        "пример*",
+        "готов*",
+        "отчет*",
+        "поясн*",
+        "записк*",
+        "example*",
+        "report*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "пример*",
+          "готов*",
+          "example*"
+        ],
+        [
+          "отчет*",
+          "пз",
+          "поясн*",
+          "report*"
+        ]
+      ],
+      "excluded_groups": [
+        [
+          "презентац*"
+        ],
+        [
+          "слайд*"
+        ],
+        [
+          "presentation*"
+        ],
+        [
+          "slide*"
+        ]
+      ],
+      "source_filter": [
+        "ПЗ_НИР_Филенко М.В.docx"
+      ],
+      "document_type_filter": [
+        "example_report"
+      ],
+      "knowledge_category_filter": [
+        "nir_example"
+      ],
+      "is_normative": false,
+      "top_k": 5,
+      "min_score": 0.45,
+      "min_rule_score": 5,
+      "search_multiplier": 5,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "neural_course_info",
+      "display_name": "Рабочая программа дисциплины «Теория нейронных сетей»",
+      "priority": 150,
+      "phrases": [
+        "теория нейронных сетей",
+        "дисциплина теория нейронных сетей",
+        "рабочая программа дисциплины теория нейронных сетей",
+        "к какому институту относится дисциплина теория нейронных сетей",
+        "к какой кафедре относится дисциплина теория нейронных сетей",
+        "к какому направлению подготовки относится дисциплина теория нейронных сетей",
+        "neural networks",
+        "neural networks course",
+        "which institute and department does the neural networks course belong to"
+      ],
+      "tokens": [
+        "нейронных",
+        "сетей",
+        "дисциплина",
+        "институт",
+        "кафедра",
+        "направление",
+        "подготовки",
+        "neural",
+        "networks",
+        "course",
+        "institute",
+        "department"
+      ],
+      "stems": [
+        "нейрон*",
+        "сет*",
+        "дисциплин*",
+        "институт*",
+        "кафедр*",
+        "направлен*",
+        "neural*",
+        "network*",
+        "course*",
+        "institute*",
+        "department*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "нейрон*",
+          "neural*"
+        ]
+      ],
+      "source_filter": [
+        "neural.pdf"
+      ],
+      "document_type_filter": [],
+      "knowledge_category_filter": [],
+      "is_normative": null,
+      "top_k": 8,
+      "min_score": 0.15,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "pz_intro",
+      "display_name": "Введение пояснительной записки",
+      "priority": 140,
+      "phrases": [
+        "что должно быть во введении пояснительной записки",
+        "что должно быть во введении пз",
+        "введение пояснительной записки",
+        "введение пз",
+        "что писать во введении",
+        "что указывать во введении"
+      ],
+      "tokens": [
+        "введение",
+        "пояснительная",
+        "записка",
+        "пз",
+        "цель",
+        "задачи",
+        "актуальность",
+        "методы"
+      ],
+      "stems": [
+        "введен*",
+        "поясн*",
+        "записк*",
+        "актуальн*",
+        "цел*",
+        "задач*",
+        "метод*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "введен*",
+          "introduction*"
+        ]
+      ],
+      "source_filter": [
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [
+        "methodical_guidelines"
+      ],
+      "knowledge_category_filter": [
+        "pz_requirements"
+      ],
+      "is_normative": true,
+      "top_k": 6,
+      "min_score": 0.35,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "nir_documents",
+      "display_name": "Документы по НИР",
+      "priority": 135,
+      "phrases": [
+        "какие документы нужно подготовить по нир",
+        "какие документы надо подготовить по нир",
+        "какие документы нужны по нир",
+        "документы по нир",
+        "отчетные материалы по нир",
+        "отчётные материалы по нир"
+      ],
+      "tokens": [
+        "документы",
+        "нир",
+        "подготовить",
+        "отчет",
+        "отчёт",
+        "материалы",
+        "пояснительная",
+        "записка"
+      ],
+      "stems": [
+        "документ*",
+        "материал*",
+        "подготов*",
+        "отчет*",
+        "нир*",
+        "document*",
+        "material*",
+        "submit*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "документ*",
+          "материал*",
+          "document*",
+          "materials*"
+        ],
+        [
+          "нир",
+          "научно-исследовательск*",
+          "research*"
+        ]
+      ],
+      "excluded_groups": [
+        [
+          "структур*"
+        ],
+        [
+          "раздел*"
+        ]
+      ],
+      "source_filter": [
+        "Производственная практика (научно-исследовательская работа).pdf",
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [],
+      "knowledge_category_filter": [],
+      "is_normative": true,
+      "top_k": 6,
+      "min_score": 0.35,
+      "min_rule_score": 5,
+      "search_multiplier": 4,
+      "max_chunks_per_document": 3
+    },
+    {
+      "class_name": "pz_formatting",
+      "display_name": "Оформление ПЗ",
+      "priority": 130,
+      "phrases": [
+        "какие требования предъявляются к оформлению пояснительной записки",
+        "требования к оформлению пояснительной записки",
+        "требования к оформлению пз",
+        "как оформить пз",
+        "оформление пз",
+        "оформление пояснительной записки",
+        "как оформить таблицу",
+        "как оформить рисунок",
+        "как оформить формулу",
+        "как оформить список литературы",
+        "оформление списка литературы",
+        "требования к оформлению",
+        "требования гост",
+        "какой шрифт",
+        "какие поля",
+        "нумерация страниц"
+      ],
+      "tokens": [
+        "оформление",
+        "оформлению",
+        "гост",
+        "таблица",
+        "таблицы",
+        "рисунок",
+        "рисунки",
+        "формула",
+        "формулы",
+        "литература",
+        "источники",
+        "шрифт",
+        "поля",
+        "отступ",
+        "нумерация",
+        "страницы",
+        "текст"
+      ],
+      "stems": [
+        "оформлен*",
+        "требован*",
+        "шрифт*",
+        "пол*",
+        "нумерац*",
+        "таблиц*",
+        "рисунк*",
+        "формул*",
+        "format*",
+        "font*",
+        "margin*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "оформлен*",
+          "гост",
+          "шрифт*",
+          "пол*",
+          "нумерац*",
+          "format*",
+          "font*",
+          "margin*"
+        ]
+      ],
+      "source_filter": [
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [
+        "methodical_guidelines"
+      ],
+      "knowledge_category_filter": [
+        "pz_requirements"
+      ],
+      "is_normative": true,
+      "top_k": 6,
+      "min_score": 0.35,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "submission_documents",
+      "display_name": "Документы для сдачи и допуска",
+      "priority": 120,
+      "phrases": [
+        "какие документы надо сдать",
+        "какие документы нужно сдать",
+        "что нужно сдать",
+        "что надо сдать",
+        "документы надо сдать",
+        "документы нужно сдать",
+        "документы для допуска",
+        "что нужно для допуска",
+        "допуск к зачету",
+        "допуск к зачёту",
+        "допуск к экзамену",
+        "допуск к защите",
+        "какие файлы нужно сдать",
+        "какие файлы надо сдать",
+        "что представить к защите"
+      ],
+      "tokens": [
+        "сдать",
+        "документы",
+        "допуск",
+        "зачет",
+        "зачёт",
+        "экзамен",
+        "представить",
+        "файлы"
+      ],
+      "stems": [
+        "сда*",
+        "допуск*",
+        "документ*",
+        "файл*",
+        "представ*",
+        "submit*",
+        "admission*",
+        "document*",
+        "file*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "сда*",
+          "допуск*",
+          "представ*",
+          "submit*",
+          "admission*"
+        ]
+      ],
+      "source_filter": [
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [
+        "methodical_guidelines"
+      ],
+      "knowledge_category_filter": [
+        "pz_requirements"
+      ],
+      "is_normative": true,
+      "top_k": 5,
+      "min_score": 0.45,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "nir_interim_report",
+      "display_name": "Промежуточный отчёт по НИР",
+      "priority": 105,
+      "phrases": [
+        "промежуточный отчет",
+        "промежуточный отчёт",
+        "семестровый контроль",
+        "что должно быть в промежуточном отчете",
+        "что должно быть в промежуточном отчёте",
+        "отчет на 8 неделе",
+        "отчёт на 8 неделе",
+        "контроль выполнения нир"
+      ],
+      "tokens": [
+        "промежуточный",
+        "семестровый",
+        "контроль",
+        "отчет",
+        "отчёт",
+        "нир",
+        "тема",
+        "цель",
+        "актуальность",
+        "задачи",
+        "этапы",
+        "план"
+      ],
+      "stems": [
+        "промежуточн*",
+        "семестров*",
+        "контрол*",
+        "отчет*",
+        "этап*",
+        "план*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "промежуточн*",
+          "семестров*",
+          "8 недел*"
+        ]
+      ],
+      "source_filter": [
+        "Производственная практика (научно-исследовательская работа).pdf"
+      ],
+      "document_type_filter": [],
+      "knowledge_category_filter": [],
+      "is_normative": true,
+      "top_k": 6,
+      "min_score": 0.35,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "nir_requirements",
+      "display_name": "Требования к НИР",
+      "priority": 95,
+      "phrases": [
+        "требования к нир",
+        "что такое нир",
+        "цель нир",
+        "цели нир",
+        "задачи нир",
+        "отчет по нир",
+        "отчёт по нир",
+        "научно-исследовательская работа",
+        "производственная практика",
+        "что должно быть в нир",
+        "что нужно сделать по нир"
+      ],
+      "tokens": [
+        "нир",
+        "научно",
+        "исследовательская",
+        "работа",
+        "практика",
+        "цель",
+        "цели",
+        "задачи",
+        "отчет",
+        "отчёт",
+        "исследование",
+        "результаты"
+      ],
+      "stems": [
+        "нир*",
+        "научно-исследовательск*",
+        "требован*",
+        "цел*",
+        "задач*",
+        "результат*",
+        "research*",
+        "requirement*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "нир",
+          "научно-исследовательск*",
+          "research*"
+        ]
+      ],
+      "excluded_groups": [
+        [
+          "структур*"
+        ],
+        [
+          "раздел*"
+        ],
+        [
+          "презентац*"
+        ],
+        [
+          "слайд*"
+        ]
+      ],
+      "source_filter": [
+        "Производственная практика (научно-исследовательская работа).pdf",
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [],
+      "knowledge_category_filter": [],
+      "is_normative": true,
+      "top_k": 5,
+      "min_score": 0.45,
+      "min_rule_score": 3,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    },
+    {
+      "class_name": "defense_presentation",
+      "display_name": "Защита и презентация",
+      "priority": 90,
+      "phrases": [
+        "требования к презентации",
+        "презентация к докладу",
+        "что нужно для защиты",
+        "защита нир",
+        "защита пз",
+        "доклад на защите",
+        "как подготовиться к защите",
+        "что нужно для допуска к защите"
+      ],
+      "tokens": [
+        "защита",
+        "презентация",
+        "слайды",
+        "доклад",
+        "выступление",
+        "комиссия",
+        "аттестация",
+        "допуск"
+      ],
+      "stems": [
+        "защит*",
+        "презентац*",
+        "слайд*",
+        "доклад*",
+        "выступлен*",
+        "комисс*",
+        "defense*",
+        "presentation*",
+        "slide*"
+      ],
+      "intents": [
+        "question",
+        "find",
+        "explain",
+        "list"
+      ],
+      "required_groups": [
+        [
+          "защит*",
+          "презентац*",
+          "слайд*",
+          "доклад*",
+          "defense*",
+          "presentation*",
+          "slide*"
+        ]
+      ],
+      "excluded_groups": [
+        [
+          "пример*",
+          "структур*"
+        ],
+        [
+          "example*",
+          "structure*"
+        ]
+      ],
+      "source_filter": [
+        "metodicheskie_ukazaniya_k_napisaniyu_pz_k_proektnoj_praktike.pdf"
+      ],
+      "document_type_filter": [
+        "methodical_guidelines"
+      ],
+      "knowledge_category_filter": [
+        "pz_requirements"
+      ],
+      "is_normative": true,
+      "top_k": 5,
+      "min_score": 0.45,
+      "min_rule_score": 4,
+      "search_multiplier": 4,
+      "max_chunks_per_document": null
+    }
+  ]
+}
